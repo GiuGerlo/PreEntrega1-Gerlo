@@ -2,16 +2,16 @@
 function agregarArticulo(articulo, cantidad) {
     switch (articulo) {
         case 'Camiseta':
-            total += cantidad * 80;
+            total = total + cantidad * 80;
             break;
         case 'Short':
-            total += cantidad * 40;
+            total = total + cantidad * 40;
             break;
         case 'Zapatilla':
-            total += cantidad * 100;
+            total = total + cantidad * 100;
             break;
         case 'Media':
-            total += cantidad * 15;
+            total = total + cantidad * 15;
             break;
         default:
             console.log('No se encontró el producto');
@@ -21,10 +21,10 @@ function agregarArticulo(articulo, cantidad) {
 function calcularDescuento(metodoPago) {
     switch (metodoPago) {
         case 'Efectivo':
-            total *= 0.75;
+            total = total * 0.75;
             break;
         case 'Transferencia':
-            total *= 0.85;
+            total = total * 0.85;
             break;
         case 'Tarjeta':
             console.log('De 3 a 6 cuotas sin interés');
@@ -48,6 +48,6 @@ while (compra) {
     }
 }
 
-const metodoPago = prompt('Ingrese el método de pago (Efectivo (25% off), Transferencia (15% off), Tarjeta):');
+const metodoPago = prompt('Ingrese el método de pago Efectivo (25% off), Transferencia (15% off), Tarjeta:');
 calcularDescuento(metodoPago);
 console.log('El total a pagar es de : $', total);
